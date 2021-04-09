@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    width: 500px;
+    background-color: darkkhaki;
+    padding: 8px 15px 8px 25px;
+}
+
+.container .authorAvatar {
+    align-self: flex-end;
+    margin-bottom: -4px;
+    z-index: 1000;
+}
+
+.container .authorAvatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.container .x {
+    width: 25px;
+    height: 30px;
+    background: darkslategray;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-end;
+}
+.container .x:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200%;
+    height: 200%;
+    background: darkkhaki;
+    border-radius: 50%;
+}
+
+.container .messageWrapper {
+    background-color: darkslategray;
+    width: 100%;
+    border-radius: 10px 10px 10px 0px ;
+    padding: 5px;
+}
+
+.container .messageWrapper .authorName {
+    color: darkgoldenrod;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.container .messageWrapper .messageText {
+    color: darkgrey;
+    font-style: italic;
+    margin-left: 20px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+
+.container .messageWrapper .dateOfPost {
+    color: dimgray;
+    float: right;
+}

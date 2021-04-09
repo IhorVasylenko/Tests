@@ -1,0 +1,94 @@
+.allWrapper {
+    text-align: center;
+}
+
+/*styles for a specific task*/
+.affairContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.affairContainer .allName {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.affairContainer:hover .allName {
+    text-decoration: underline;
+}
+
+.high {
+    color: red;
+}
+
+.middle {
+    color: darkorange;
+}
+
+.low {
+    color: lawngreen;
+}
+
+.affairContainer .affairDeleteButton {
+    background-color: lightgrey;
+    height: 24px;
+    width: 24px;
+    border-color: transparent;
+    border-radius: 50%;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.affairContainer .affairDeleteButton:hover {
+    background-color: darkgray;
+}
+
+/*styles for buttons and task container*/
+.affairsContainer {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: whitesmoke;
+    padding: 15px;
+    border: 1px solid lightgrey;
+}
+
+.affairsContainer .mappedAffairs {
+
+}
+
+.affairsContainer .buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.affairsContainer .buttonWrapper .allButton {
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-color: transparent;
+    outline: none;
+    background-color: darkgray;
+    opacity: .7;
+}
+
+.affairsContainer .buttonWrapper .allButton:focus {
+    opacity: 1;
+}
+
+.affairsContainer .buttonWrapper .highB{
+    background-color: red;
+}
+
+.affairsContainer .buttonWrapper .middleB{
+    background-color: darkorange;
+}
+
+.affairsContainer .buttonWrapper .lowB{
+    background-color: lawngreen;
+}

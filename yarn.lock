@@ -2481,7 +2481,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/testing-library__jest-dom@npm:^5.9.1":
+"@types/testing-library__jest-dom@npm:^5.9.1, @types/testing-library__jest-dom@npm:^5.9.5":
   version: 5.9.5
   resolution: "@types/testing-library__jest-dom@npm:5.9.5"
   dependencies:
@@ -7496,7 +7496,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"identity-obj-proxy@npm:3.0.0":
+"identity-obj-proxy@npm:3.0.0, identity-obj-proxy@npm:^3.0.0":
   version: 3.0.0
   resolution: "identity-obj-proxy@npm:3.0.0"
   dependencies:
@@ -8336,6 +8336,15 @@ fsevents@^1.2.7:
     ts-node:
       optional: true
   checksum: 974e7690bab003cc204906802107b6a38a32bcb2033bf738bdecc6d8ee5b536b4ca11d65c8a511ad0e730ec631651d666787ffcaf86365869dcceacb06d4e875
+  languageName: node
+  linkType: hard
+
+"jest-css-modules@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "jest-css-modules@npm:2.1.0"
+  dependencies:
+    identity-obj-proxy: 3.0.0
+  checksum: d1e3966296c5214936a3abf8cd22a17083c0468d265feb009d406bb78bd8bb87b16fa8081f83a4a1350bf6e5bc8e7b50d9606ca2663ed52234ad2f46a7eab05d
   languageName: node
   linkType: hard
 
@@ -9715,7 +9724,10 @@ fsevents@^1.2.7:
     "@types/node": ^12.0.0
     "@types/react": ^17.0.0
     "@types/react-dom": ^17.0.0
+    "@types/testing-library__jest-dom": ^5.9.5
     eslint-config-react-app: ^6.0.0
+    identity-obj-proxy: ^3.0.0
+    jest-css-modules: ^2.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
     react-scripts: 4.0.3
