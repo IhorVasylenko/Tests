@@ -1,28 +1,54 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
+import {UserType} from "./HW3";
+import s from './Greeting.module.css'
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: UserType[]
+    addUserCallback: (name: string) => void
 }
 
-// более простой и понятный для новичков
-// function GreetingContainer(props: GreetingPropsType) {
-
-// более современный и удобный для про :)
 // уровень локальной логики
-const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
+    const [name, setName] = useState<string>('')
+    const [error, setError] = useState<string>('')
+    const [disable, setDisable] = useState<boolean>(false)
+    const [inputClassName, setInputClass] = useState<string>(`${s.input} ${s.default}`)
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
+        if (e.currentTarget.value !== ' ') {
+            setName(e.currentTarget.value)
+            setError('')
+            setDisable(false)
+            setInputClass(`${s.input} ${s.default}`)
+        } else {
+            setError('Invalid name!')
+            setName('')
+            setDisable(true)
+            setInputClass(`${s.input} ${s.error}`)
+        }
     }
     const addUser = () => {
-        alert(`Hello  !`) // need to fix
+        if (name.length === 0) {
+            setError('Input cannot be empty!')
+            setName('')
+            setDisable(true)
+            setInputClass(`${s.input} ${s.error}`)
+        } else {
+            addUserCallback(name)
+            alert(`Hello  !` + name)
+            setName('')
+            setInputClass(`${s.input} ${s.default}`)
+        }
+
+    }
+    const pressAddUser = (e: KeyboardEvent<HTMLInputElement>) => {
+        if(e.key === 'Enter') {
+            addUser()
+        }
     }
 
-    const totalUsers = 0 // need to fix
+    const totalUsers = users.length
 
     return (
         <Greeting
@@ -31,6 +57,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            pressAddUser={pressAddUser}
+            disable={disable}
+            inputClassName={inputClassName}
         />
     )
 }
