@@ -5,25 +5,31 @@ type GreetingPropsType = {
     name: string
     setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
     addUser: () => void
+    onEnter: (e: KeyboardEvent<HTMLInputElement>) => void
     error: string
     totalUsers: number
-    pressAddUser: (e: KeyboardEvent<HTMLInputElement>) => void
-    disable: boolean
-    inputClassName: string
 }
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, pressAddUser, error, totalUsers, disable, inputClassName}
+    {name, setNameCallback, addUser, onEnter, error, totalUsers} // деструктуризация пропсов
 ) => {
+    const inputClass = error ? s.errorInput : s.input
+
     return (
-        <div className={s.container}>
-            <input placeholder={'Add new name...'} value={name} onChange={setNameCallback} onKeyPress={pressAddUser} className={inputClassName}/>
-            <span className={s.errorName}>{error}</span>
-            <button className={s.button} onClick={addUser} disabled={disable}>add</button>
-            <span className={s.usersCount}>
-                Counter is:<br />{totalUsers}
-            </span>
+        <div className={s.greeting}>
+            <div>
+                <input
+                    value={name}
+                    onChange={setNameCallback}
+                    className={inputClass}
+                    onKeyDown={onEnter}
+                    onBlur={setNameCallback}
+                />
+                <div className={s.error}>{error}</div>
+            </div>
+            <button onClick={addUser} className={s.button} disabled={!name}>add</button>
+            <div className={s.count}>{totalUsers}</div>
         </div>
     )
 }

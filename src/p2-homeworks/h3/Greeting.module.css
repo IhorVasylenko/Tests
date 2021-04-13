@@ -3,68 +3,52 @@
     padding: 20px 0;
 }
 
+.greeting {
+    display: flex;
+    align-items: flex-start;
+}
 
-.container {
-    width: 350px;
-    height: 90px;
-    display: grid;
-    grid-template-rows: 33% 33% 33%;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: 'input button' 'error error' 'counter counter' ;
-    justify-content: center;
-
-    margin: 0 auto;
-    padding: 20px 10px;
-    background-color: ghostwhite;
-    border: 1px solid aliceblue;
-    border-radius: 20px;
+.errorInput {
+    margin: 10px;
+    background: rgba(255, 0, 0, .3);
+    color: rgba(255, 0, 0, 1);
+    border: 2px solid rgba(255, 0, 0, 1);
+    outline: none;
 }
 
 .input {
-    grid-area: input;
-    border-radius: 5px;
+    margin: 10px;
+    background: rgba(60, 60, 60, .3);
+    color: black;
+}
+.input:focus {
     outline: none;
-    height: 16px;
-    background-color: whitesmoke;
-}
-.input::placeholder {
-    color: lightgrey;
-}
-.default {
-    border: 2px solid black;
-}
-.error {
-    border: 2px solid red;
+    border: 2px solid rgba(60, 60, 60, 1);
 }
 
-.errorName {
-    grid-area: error;
-    color: red;
-    font-weight: bold;
+.error {
+    color: rgba(255, 0, 0, 1);
+    height: 21px;
+    margin-left: 10px;
 }
 
 .button {
-    grid-area: button;
-    margin-left: 5px;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.3);
+    margin: 10px;
+    width: 60px;
+    background: rgba(60, 60, 60, .3);
     color: whitesmoke;
-    height: 22px;
+    outline: none;
 }
-.button:hover {
-    background-color: rgba(0,0,0,0.5);
+.button:focus {
+    outline: rgba(60, 60, 60, 1);
 }
-.button:hover:disabled {
-    background-color: rgba(0,0,0,0.1);
+.button:active {
+    background: rgba(60, 60, 60, .6);
 }
 .button:disabled {
-    cursor: not-allowed;
-    background-color: rgba(0,0,0,0.1);
-    height: 22px;
+    color: rgba(60, 60, 60, .1);
 }
 
-.usersCount {
-    grid-area: counter;
+.count {
+    margin: 10px;
 }

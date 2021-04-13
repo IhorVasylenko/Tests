@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import AlternativeGreetingContainer from './AlternativeGreetingContainer'
 import GreetingContainer from './GreetingContainer'
 import {v1} from "uuid";
 import s from './Greeting.module.css'
@@ -14,17 +15,19 @@ function HW3() {
     const [users, setUsers] = useState<UserType[]>([])
 
     const addUserCallback = (name: string) => {
-        const newName: UserType = {
+        const user: UserType = {
             _id: v1(),
-            name: name
+            name
         }
-        setUsers([newName, ...users])
+        setUsers([...users, user])
     }
 
     return (
         <div className={s.allWrapper}>
             <hr/>
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
+            <hr/>
+            {/*<AlternativeGreetingContainer users={users} addUserCallback={addUserCallback}/>*/}
             <hr/>
         </div>
     )

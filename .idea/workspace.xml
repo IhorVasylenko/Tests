@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a687bb3-4d41-443f-99e8-932a7e413686" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/AlternativeGreeting.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/AlternativeGreetingContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/install-state.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.yarn/install-state.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/p1-main/m1-ui/u1-app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/p1-main/m1-ui/u1-app/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/p2-homeworks/h3/AlternativeGreeting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/AlternativeGreeting.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/p2-homeworks/h3/Greeting.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/Greeting.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/p2-homeworks/h3/Greeting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/Greeting.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/p2-homeworks/h3/GreetingContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/GreetingContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/p2-homeworks/h3/HW3.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/p2-homeworks/h3/HW3.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TodoList/my-todoList-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/p2-homeworks/h3" />
     <property name="nodejs.jest.jest_package" value="yarn:package.json:react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="yarn:package.json:typescript" />
@@ -53,6 +51,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\React\incubator\Test\my-app\src\p2-homeworks\h3" />
       <recent name="D:\React\incubator\Test\my-app\src\p2-homeworks\h2" />
       <recent name="D:\React\incubator\Test\my-app\src\p2-homeworks\h1" />
       <recent name="D:\React\incubator\Test\my-app\src" />
@@ -152,7 +151,7 @@
       <workItem from="1617882521281" duration="16317000" />
       <workItem from="1617901501571" duration="49385000" />
       <workItem from="1618251851013" duration="7103000" />
-      <workItem from="1618286232256" duration="12347000" />
+      <workItem from="1618286232256" duration="22459000" />
     </task>
     <servers />
   </component>

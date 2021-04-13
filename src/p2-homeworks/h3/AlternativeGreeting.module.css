@@ -1,0 +1,67 @@
+.container {
+    width: 350px;
+    height: 90px;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 'input button' 'error error' 'counter counter' ;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 20px 10px;
+    background-color: ghostwhite;
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+}
+
+.input {
+    grid-area: input;
+    border-radius: 5px;
+    outline: none;
+    height: 16px;
+    background-color: whitesmoke;
+}
+.input::placeholder {
+    color: lightgrey;
+}
+.input:focus {
+    border: 2px solid rgba(0,0,0,1);
+}
+.default {
+    border: 2px solid rgba(0,0,0,0.5);
+}
+.error {
+    border: 2px solid red;
+}
+
+.errorName {
+    grid-area: error;
+    color: red;
+    font-weight: bold;
+}
+
+.button {
+    grid-area: button;
+    margin-left: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.3);
+    color: whitesmoke;
+    height: 22px;
+}
+.button:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+.button:hover:disabled {
+    background-color: rgba(0,0,0,0.1);
+}
+.button:disabled {
+    cursor: not-allowed;
+    background-color: rgba(0,0,0,0.1);
+    height: 22px;
+}
+
+.usersCount {
+    grid-area: counter;
+}
