@@ -3,6 +3,8 @@ import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import s from './HW4.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
+import AlternativeHomeWorks from "./alternative/ALTERNATIVE-HW4";
+import Check from "./alternative/common/check/Check";
 
 function HW4() {
     const [text, setText] = useState<string>('')
@@ -37,7 +39,7 @@ function HW4() {
                     className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
 
-                {/*----------------------------------------------------*/}
+                ----------------------------------------------------
 
                 <SuperButton>
                     default
@@ -47,31 +49,30 @@ function HW4() {
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    delete // название кнопки попадёт в children
                 </SuperButton>
 
                 <SuperButton disabled>
                     disabled
                 </SuperButton>
 
-                {/*----------------------------------------------------*/}
+                ----------------------------------------------------
 
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    some text // этот текст попадёт в children
                 </SuperCheckbox>
 
-                {/*// onChange тоже должен работать*/}
+                // onChange тоже должен работать
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
 
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
+            {/*<AlternativeHomeWorks/>*/}
+            <hr/>
+            <Check/>
             <hr/>
         </div>
     )

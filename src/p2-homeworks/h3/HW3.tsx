@@ -27,7 +27,7 @@ function HW3() {
             <hr/>
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
             <hr/>
-            {/*<AlternativeGreetingContainer users={users} addUserCallback={addUserCallback}/>*/}
+            <AlternativeGreetingContainer users={users} addUserCallback={addUserCallback}/>
             <hr/>
         </div>
     )
